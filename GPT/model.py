@@ -16,7 +16,18 @@ class AttentionHead(nn.Module):
         self.value = nn.Linear(num_embed, head_size, bias=False)
         # tril is a lower triangular matrix. it is not a parameter
         # of the model, so we assign it to the module using register_buffer
-        self.register_buffer("tril", torch.tril(torch.ones(block_size, block_size)))
+        #self.register_buffer("tril", torch.tril(torch.ones(block_size, block_size)))
+
+        step = 2
+        i = 0
+        t_0 = torch.zeros(block_size, block_size)
+        for t in t_0:  
+            t_0[i,i] = 1
+            for j in range(i):
+                if (i-j) % step == 0:
+                    t_0[i,j] = 1
+            i+=1
+        self.register_buffer("tril", t_0)
 
         # let's also add dropout
         self.dropout = nn.Dropout(dropout)
