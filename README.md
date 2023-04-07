@@ -4,7 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/120099863/230622045-c3056f96-ead2-4f9e-95e4-54506c5cf477.png)
 
-## Part 1: BERT
+## Part 1: BERT [link](https://github.com/MPGarg/Assignment-11/blob/main/Assignment11_Part1.ipynb)
 
 * Data related to Space Exploration was collected and stored in training.txt file. 
 
@@ -28,7 +28,7 @@ Output:
 
 ![image](https://user-images.githubusercontent.com/120099863/230623503-779310f6-0c50-403c-a63e-a90ad28dcadc.png)
   
-## Part 2: GPT
+## Part 2: GPT [link](https://github.com/MPGarg/Assignment-11/blob/main/Assignment11_Part2.ipynb)
   
 Sparse Attention Code: Code is changed in AttentionHead Class. Step defined is used as 2 thus it leaves one digonal line.
 
